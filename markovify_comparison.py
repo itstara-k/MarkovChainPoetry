@@ -17,6 +17,7 @@ def read_poems(num_poems):
         
     return text
 
+#clean_text(str) -> str: Returns a string object text with all newline characters replaced by spaces and all multiple spaces replaced by single spaces
 def clean_text(text):
     text = re.sub(r'\n', ' ', text)
     text = re.sub(r' +', ' ', text)
@@ -33,31 +34,31 @@ large_text_model = markovify.Text(large_dataset)
 print("----Small Dataset----")
 print(small_text_model.make_short_sentence(max_chars=250, min_chars=100, tries=100)) #100-250 chars = ~20 words -> short poem
 print("\n")
-print(small_text_model.make_short_sentence(max_chars=450, min_chars=200, tries=100))  #200-450 chars = ~40 words -> medium poem
+print(small_text_model.make_short_sentence(max_chars=350, min_chars=200, tries=100))  #200-450 chars = ~40 words -> medium poem
 print("\n")
-print(small_text_model.make_short_sentence(max_chars=650, min_chars=300, tries=100))  #300-650 chars = ~60 words -> long poem
+print(small_text_model.make_short_sentence(max_chars=450, min_chars=300, tries=100))  #300-650 chars = ~60 words -> long poem
 print("\n")
-print(small_text_model.make_short_sentence(max_chars=850, min_chars=400, tries=100))  #400-850 chars = ~80 words -> extra long poem
+print(small_text_model.make_short_sentence(max_chars=650, min_chars=400, tries=100))  #400-850 chars = ~80 words -> extra long poem
 print("\n")
 
 print("----Medium Dataset----")
 print(medium_text_model.make_short_sentence(max_chars=250, min_chars=100, tries=100))
 print("\n")
-print(medium_text_model.make_short_sentence(max_chars=450, min_chars=200, tries=100)) 
+print(medium_text_model.make_short_sentence(max_chars=350, min_chars=200, tries=100)) 
 print("\n")
-print(medium_text_model.make_short_sentence(max_chars=650, min_chars=300, tries=100))
+print(medium_text_model.make_short_sentence(max_chars=450, min_chars=300, tries=100))
 print("\n")
-print(medium_text_model.make_short_sentence(max_chars=850, min_chars=400, tries=100))
+print(medium_text_model.make_short_sentence(max_chars=650, min_chars=400, tries=100))
 print("\n")
 
 print("----Large Dataset----")
 print(large_text_model.make_short_sentence(max_chars=250, min_chars=100, tries=100)) 
 print("\n") 
-print(large_text_model.make_short_sentence(max_chars=450, min_chars=200, tries=100)) 
+print(large_text_model.make_short_sentence(max_chars=350, min_chars=200, tries=100)) 
 print("\n")
-print(large_text_model.make_short_sentence(max_chars=650, min_chars=300, tries=100))
+print(large_text_model.make_short_sentence(max_chars=450, min_chars=300, tries=100))
 print("\n")
-print(large_text_model.make_short_sentence(max_chars=850, min_chars=400, tries=100))
+print(large_text_model.make_short_sentence(max_chars=650, min_chars=400, tries=100))
 print("\n")
 
 
